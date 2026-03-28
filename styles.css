@@ -591,11 +591,11 @@ input[type="range"] {
   }
 
   .stage-panel {
-    min-height: 74svh;
+    min-height: 148svh;
   }
 
   #sakuraCanvas {
-    min-height: 74svh;
+    min-height: 148svh;
   }
 
   .control-panel {
@@ -724,7 +724,7 @@ input[type="range"] {
 
   .stage-panel,
   #sakuraCanvas {
-    min-height: 78svh;
+    min-height: 156svh;
   }
 
   .control-panel {
