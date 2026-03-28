@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f8" />
+      <stop offset="55%" stop-color="#ffe6ef" />
+      <stop offset="100%" stop-color="#eefaf6" />
+    </linearGradient>
+    <linearGradient id="tail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd2e3" />
+      <stop offset="100%" stop-color="#df6b9b" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="144" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="188" fill="#ffffff" fill-opacity="0.32" />
+  <path d="M110 266C175 170 274 155 404 223" fill="none" stroke="url(#tail)" stroke-linecap="round" stroke-width="38" />
+  <path d="M140 332C220 258 306 258 392 322" fill="none" stroke="#ffdbe9" stroke-linecap="round" stroke-width="24" />
+  <g fill="#ff91b7">
+    <path d="M235 127c18 10 22 24 21 44c17-8 31-6 44 8c-13 12-27 15-45 10c8 17 7 31-5 45c-13-12-16-26-10-44c-18 8-32 7-45-5c11-13 25-16 43-11c-8-18-7-32-3-47Z" />
+    <path d="M139 238c12 6 17 17 16 30c12-6 23-5 31 5c-9 8-19 10-31 7c5 11 5 22-3 31c-10-8-11-18-7-31c-12 6-22 5-31-4c8-9 18-11 30-8c-5-11-5-21-5-30Z" />
+    <path d="M324 285c13 7 18 18 17 33c13-6 24-5 34 6c-10 9-21 11-34 8c6 12 5 23-3 34c-10-9-12-20-8-34c-12 6-23 5-33-5c9-10 19-12 33-9c-6-12-6-22-6-33Z" />
+  </g>
+</svg>

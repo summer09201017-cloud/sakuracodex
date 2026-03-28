@@ -1,0 +1,31 @@
+{
+  "name": "櫻花鼠尾",
+  "short_name": "櫻花鼠尾",
+  "description": "滑鼠與指尖拖出櫻花落雪長尾巴，可安裝到手機與桌面。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff6f8",
+  "theme_color": "#f6d5e6",
+  "lang": "zh-Hant",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

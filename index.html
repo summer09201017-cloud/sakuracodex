@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6d5e6">
+    <meta name="description" content="櫻花如落雪般追著指尖與滑鼠飛舞，可安裝到手機與桌面的互動小樂園。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="櫻花鼠尾">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>櫻花鼠尾</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">SAKURA TAIL STUDIO</p>
+          <h1>滑鼠與指尖，拖出櫻花落雪長尾巴</h1>
+          <p class="lede">
+            在手機與電腦上都能玩。移動、輕點、拖曳，就會留下櫻花飛雪般的長尾軌跡；
+            你還可以切換色系、尾巴形態與花瓣變化，並把它安裝到手機主畫面。
+          </p>
+          <div class="hero-actions">
+            <button id="installButton" class="pill-button primary" type="button">
+              安裝到手機 / 桌面
+            </button>
+            <button id="burstButton" class="pill-button ghost" type="button">
+              一鍵櫻吹雪
+            </button>
+          </div>
+          <p id="installHint" class="install-hint" aria-live="polite"></p>
+        </div>
+        <div class="hero-stats" aria-hidden="true">
+          <div class="stat">
+            <span class="stat-label">模式</span>
+            <strong id="modeBadge">雪舞長尾</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">色調</span>
+            <strong id="paletteBadge">櫻霧粉</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">觸感</span>
+            <strong id="deviceBadge">等待互動</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="stage-panel">
+          <div class="stage-copy">
+            <p>拖曳畫面來召喚尾巴</p>
+            <span>滑鼠、觸控、快速甩動都會有不同的花瓣飄落節奏</span>
+          </div>
+          <canvas id="sakuraCanvas" aria-label="櫻花尾巴互動畫布"></canvas>
+        </section>
+
+        <aside class="control-panel">
+          <div class="panel-heading">
+            <h2>櫻花調色盤</h2>
+            <p>自由切換尾巴風格，讓櫻花像雪、像光、也像彗尾。</p>
+          </div>
+
+          <section class="control-group">
+            <label for="paletteSelect">配色</label>
+            <select id="paletteSelect"></select>
+          </section>
+
+          <section class="control-group">
+            <label for="modeSelect">尾巴變化</label>
+            <select id="modeSelect"></select>
+          </section>
+
+          <section class="control-group">
+            <label for="shapeSelect">花瓣樣式</label>
+            <select id="shapeSelect"></select>
+          </section>
+
+          <section class="control-group slider-group">
+            <div class="slider-header">
+              <label for="densityRange">花瓣密度</label>
+              <span id="densityValue">6</span>
+            </div>
+            <input id="densityRange" type="range" min="2" max="16" value="6">
+          </section>
+
+          <section class="control-group slider-group">
+            <div class="slider-header">
+              <label for="lengthRange">尾巴長度</label>
+              <span id="lengthValue">72</span>
+            </div>
+            <input id="lengthRange" type="range" min="32" max="160" value="72">
+          </section>
+
+          <section class="control-group slider-group">
+            <div class="slider-header">
+              <label for="windRange">飄雪風感</label>
+              <span id="windValue">28</span>
+            </div>
+            <input id="windRange" type="range" min="0" max="60" value="28">
+          </section>
+
+          <section class="chip-group" aria-label="快速色彩切換">
+            <button class="palette-chip active" data-palette="mist" type="button">櫻霧粉</button>
+            <button class="palette-chip" data-palette="sunset" type="button">晚霞桃</button>
+            <button class="palette-chip" data-palette="lilac" type="button">藤霜紫</button>
+            <button class="palette-chip" data-palette="jade" type="button">春玉綠</button>
+          </section>
+
+          <section class="tips-card">
+            <h3>安裝提示</h3>
+            <p>Android / Chrome 可直接按上方安裝鍵。</p>
+            <p>iPhone / iPad 請用 Safari 的「分享」再選「加入主畫面」。</p>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
