@@ -106,6 +106,9 @@ const installHint = document.getElementById("installHint");
 const modeBadge = document.getElementById("modeBadge");
 const paletteBadge = document.getElementById("paletteBadge");
 const deviceBadge = document.getElementById("deviceBadge");
+const previewModeLabel = document.getElementById("previewModeLabel");
+const previewPaletteLabel = document.getElementById("previewPaletteLabel");
+const previewShapeLabel = document.getElementById("previewShapeLabel");
 
 const paletteSelect = document.getElementById("paletteSelect");
 const modeSelect = document.getElementById("modeSelect");
@@ -207,7 +210,11 @@ function updateTheme() {
   document.documentElement.style.setProperty("--bg-top", palette.background[0]);
   document.documentElement.style.setProperty("--bg-mid", palette.background[1]);
   document.documentElement.style.setProperty("--bg-bottom", palette.background[2]);
+  document.documentElement.style.setProperty("--petal-one", palette.petals[0]);
+  document.documentElement.style.setProperty("--petal-two", palette.petals[1]);
+  document.documentElement.style.setProperty("--petal-three", palette.petals[2]);
   paletteBadge.textContent = palette.name;
+  previewPaletteLabel.textContent = palette.name;
 
   chipButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.palette === state.paletteKey);
@@ -229,6 +236,8 @@ function syncBadges() {
   densityValue.textContent = `${state.density}`;
   lengthValue.textContent = `${state.tailLength}`;
   windValue.textContent = `${state.wind}`;
+  previewModeLabel.textContent = modes[state.modeKey].name;
+  previewShapeLabel.textContent = shapes[state.shapeKey];
 }
 
 function spawnParticle(x, y, velocityScale = 1) {
